@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* An Vien Brand Colors */
+        --background: 40 40% 96%;
+        --foreground: 0 10% 12%;
+
+        --card: 40 30% 98%;
+        --card-foreground: 0 10% 12%;
+
+        --popover: 40 30% 98%;
+        --popover-foreground: 0 10% 12%;
+
+        /* Deep Burgundy - Primary Brand */
+        --primary: 0 56% 23%;
+        --primary-foreground: 40 40% 94%;
+
+        /* Ivory/Cream */
+        --secondary: 40 40% 94%;
+        --secondary-foreground: 0 56% 23%;
+
+        /* Muted warm */
+        --muted: 30 20% 90%;
+        --muted-foreground: 25 20% 45%;
+
+        /* Gold accent */
+        --accent: 44 75% 46%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 30 20% 84%;
+        --input: 30 20% 88%;
+        --ring: 44 75% 46%;
+
+        --radius: 0.25rem;
+
+        /* Custom tokens */
+        --gold: 44 75% 46%;
+        --gold-light: 44 70% 62%;
+        --burgundy: 0 56% 23%;
+        --burgundy-dark: 0 60% 16%;
+        --ivory: 40 40% 96%;
+        --ivory-dark: 38 30% 90%;
+        --warm-brown: 25 40% 35%;
+        --charcoal: 0 5% 18%;
+
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Jost', system-ui, sans-serif;
+
+        --shadow-warm: 0 8px 32px -8px hsl(0 56% 23% / 0.18);
+        --shadow-gold: 0 4px 20px -4px hsl(44 75% 46% / 0.3);
+        --shadow-deep: 0 20px 60px -12px hsl(0 56% 23% / 0.35);
+
+        --gradient-hero: linear-gradient(160deg, hsl(0 60% 16% / 0.92) 0%, hsl(0 56% 23% / 0.75) 50%, hsl(25 40% 20% / 0.6) 100%);
+        --gradient-gold: linear-gradient(135deg, hsl(44 75% 46%), hsl(44 70% 62%));
+        --gradient-warm: linear-gradient(180deg, hsl(40 40% 96%) 0%, hsl(38 30% 92%) 100%);
+
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: var(--font-sans);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-serif);
+    }
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--ivory));
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--gold));
+    border-radius: 3px;
+}
+
+/* Gold divider */
+.divider-gold {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    margin: 0 auto;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
+}
+
+/* Gold shimmer text */
+.text-shimmer {
+    background: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section padding */
+.section-pad {
+    @apply py-20 md:py-28;
+}
+
+/* Overlay blend for images */
+.img-overlay {
+    position: relative;
+}
+
+.img-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+    pointer-events: none;
+}
+
+/* Hover lift card */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-deep);
+}
