@@ -53,20 +53,22 @@ export default {
                     DEFAULT: 'hsl(var(--card))',
                     foreground: 'hsl(var(--card-foreground))'
                 },
-                gold: {
-                    DEFAULT: 'hsl(var(--gold) / <alpha-value>)',
-                    light: 'hsl(var(--gold-light) / <alpha-value>)',
+                ocean: {
+                    DEFAULT: 'hsl(var(--ocean) / <alpha-value>)',
+                    dark: 'hsl(var(--ocean-dark) / <alpha-value>)',
+                    mid: 'hsl(var(--ocean-mid) / <alpha-value>)',
+                    light: 'hsl(var(--ocean-light) / <alpha-value>)',
                 },
-                burgundy: {
-                    DEFAULT: 'hsl(var(--burgundy) / <alpha-value>)',
-                    dark: 'hsl(var(--burgundy-dark) / <alpha-value>)',
+                coral: {
+                    DEFAULT: 'hsl(var(--coral) / <alpha-value>)',
+                    light: 'hsl(var(--coral-light) / <alpha-value>)',
                 },
-                ivory: {
-                    DEFAULT: 'hsl(var(--ivory) / <alpha-value>)',
-                    dark: 'hsl(var(--ivory-dark) / <alpha-value>)',
+                sand: {
+                    DEFAULT: 'hsl(var(--sand) / <alpha-value>)',
+                    dark: 'hsl(var(--sand-dark) / <alpha-value>)',
                 },
-                warmBrown: 'hsl(var(--warm-brown) / <alpha-value>)',
-                charcoal: 'hsl(var(--charcoal) / <alpha-value>)',
+                seafoam: 'hsl(var(--seafoam) / <alpha-value>)',
+                ink: 'hsl(var(--ink) / <alpha-value>)',
                 sidebar: {
                     DEFAULT: 'hsl(var(--sidebar-background))',
                     foreground: 'hsl(var(--sidebar-foreground))',
@@ -79,8 +81,8 @@ export default {
                 }
             },
             fontFamily: {
-                serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-                sans: ['Jost', 'system-ui', 'sans-serif'],
+                serif: ['Playfair Display', 'Georgia', 'serif'],
+                sans: ['Be Vietnam Pro', 'system-ui', 'sans-serif'],
             },
             borderRadius: {
                 lg: 'var(--radius)',
@@ -88,8 +90,8 @@ export default {
                 sm: 'calc(var(--radius) - 4px)'
             },
             boxShadow: {
-                warm: 'var(--shadow-warm)',
-                gold: 'var(--shadow-gold)',
+                ocean: 'var(--shadow-ocean)',
+                coral: 'var(--shadow-coral)',
                 deep: 'var(--shadow-deep)',
             },
             keyframes: {
@@ -102,7 +104,7 @@ export default {
                     to: { height: '0' }
                 },
                 'fade-in-up': {
-                    from: { opacity: '0', transform: 'translateY(24px)' },
+                    from: { opacity: '0', transform: 'translateY(28px)' },
                     to: { opacity: '1', transform: 'translateY(0)' }
                 },
                 'fade-in': {
@@ -111,13 +113,13 @@ export default {
                 },
                 float: {
                     '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-8px)' },
+                    '50%': { transform: 'translateY(-10px)' },
                 },
             },
             animation: {
                 'accordion-down': 'accordion-down 0.2s ease-out',
                 'accordion-up': 'accordion-up 0.2s ease-out',
-                'fade-in-up': 'fade-in-up 0.7s ease-out',
+                'fade-in-up': 'fade-in-up 0.8s ease-out',
                 'fade-in': 'fade-in 0.6s ease-out',
                 float: 'float 3s ease-in-out infinite',
             }

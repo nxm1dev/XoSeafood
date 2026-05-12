@@ -4,61 +4,64 @@
 
 @layer base {
     :root {
-        /* An Vien Brand Colors */
-        --background: 40 40% 96%;
-        --foreground: 0 10% 12%;
+        /* Xô Seafood Brand Colors – Ocean Deep */
+        --background: 200 25% 97%;
+        --foreground: 210 40% 12%;
 
-        --card: 40 30% 98%;
-        --card-foreground: 0 10% 12%;
+        --card: 200 20% 99%;
+        --card-foreground: 210 40% 12%;
 
-        --popover: 40 30% 98%;
-        --popover-foreground: 0 10% 12%;
+        --popover: 200 20% 99%;
+        --popover-foreground: 210 40% 12%;
 
-        /* Deep Burgundy - Primary Brand */
-        --primary: 0 56% 23%;
-        --primary-foreground: 40 40% 94%;
+        /* Deep Ocean Teal - Primary Brand */
+        --primary: 188 72% 22%;
+        --primary-foreground: 0 0% 100%;
 
-        /* Ivory/Cream */
-        --secondary: 40 40% 94%;
-        --secondary-foreground: 0 56% 23%;
+        /* Sandy Cream */
+        --secondary: 40 45% 93%;
+        --secondary-foreground: 188 72% 22%;
 
-        /* Muted warm */
-        --muted: 30 20% 90%;
-        --muted-foreground: 25 20% 45%;
+        /* Muted ocean mist */
+        --muted: 200 20% 92%;
+        --muted-foreground: 200 15% 45%;
 
-        /* Gold accent */
-        --accent: 44 75% 46%;
+        /* Vibrant coral accent */
+        --accent: 16 90% 54%;
         --accent-foreground: 0 0% 100%;
 
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 210 40% 98%;
 
-        --border: 30 20% 84%;
-        --input: 30 20% 88%;
-        --ring: 44 75% 46%;
+        --border: 200 18% 85%;
+        --input: 200 18% 88%;
+        --ring: 188 72% 30%;
 
-        --radius: 0.25rem;
+        --radius: 0.5rem;
 
-        /* Custom tokens */
-        --gold: 44 75% 46%;
-        --gold-light: 44 70% 62%;
-        --burgundy: 0 56% 23%;
-        --burgundy-dark: 0 60% 16%;
-        --ivory: 40 40% 96%;
-        --ivory-dark: 38 30% 90%;
-        --warm-brown: 25 40% 35%;
-        --charcoal: 0 5% 18%;
+        /* Custom ocean tokens */
+        --ocean: 188 72% 22%;
+        --ocean-dark: 195 80% 13%;
+        --ocean-mid: 188 65% 30%;
+        --ocean-light: 188 55% 45%;
+        --coral: 16 90% 54%;
+        --coral-light: 16 85% 65%;
+        --sand: 40 45% 93%;
+        --sand-dark: 38 38% 85%;
+        --seafoam: 168 50% 88%;
+        --ink: 210 40% 10%;
 
-        --font-serif: 'Cormorant Garamond', Georgia, serif;
-        --font-sans: 'Jost', system-ui, sans-serif;
+        --font-serif: 'Playfair Display', Georgia, serif;
+        --font-sans: 'Be Vietnam Pro', system-ui, sans-serif;
 
-        --shadow-warm: 0 8px 32px -8px hsl(0 56% 23% / 0.18);
-        --shadow-gold: 0 4px 20px -4px hsl(44 75% 46% / 0.3);
-        --shadow-deep: 0 20px 60px -12px hsl(0 56% 23% / 0.35);
+        --shadow-ocean: 0 8px 32px -8px hsl(188 72% 22% / 0.25);
+        --shadow-coral: 0 4px 20px -4px hsl(16 90% 54% / 0.35);
+        --shadow-deep: 0 20px 60px -12px hsl(195 80% 13% / 0.45);
 
-        --gradient-hero: linear-gradient(160deg, hsl(0 60% 16% / 0.92) 0%, hsl(0 56% 23% / 0.75) 50%, hsl(25 40% 20% / 0.6) 100%);
-        --gradient-gold: linear-gradient(135deg, hsl(44 75% 46%), hsl(44 70% 62%));
-        --gradient-warm: linear-gradient(180deg, hsl(40 40% 96%) 0%, hsl(38 30% 92%) 100%);
+        --gradient-hero: linear-gradient(160deg, hsl(195 80% 10% / 0.95) 0%, hsl(188 72% 22% / 0.80) 50%, hsl(188 55% 30% / 0.65) 100%);
+        --gradient-ocean: linear-gradient(135deg, hsl(188 72% 22%), hsl(188 55% 38%));
+        --gradient-coral: linear-gradient(135deg, hsl(16 90% 54%), hsl(16 85% 65%));
+        --gradient-sand: linear-gradient(180deg, hsl(40 45% 97%) 0%, hsl(38 38% 92%) 100%);
 
         --sidebar-background: 0 0% 98%;
         --sidebar-foreground: 240 5.3% 26.1%;
@@ -102,27 +105,42 @@ body,
 }
 
 ::-webkit-scrollbar-track {
-    background: hsl(var(--ivory));
+    background: hsl(var(--sand));
 }
 
 ::-webkit-scrollbar-thumb {
-    background: hsl(var(--gold));
+    background: hsl(var(--ocean));
     border-radius: 3px;
 }
 
-/* Gold divider */
-.divider-gold {
+/* Coral divider */
+.divider-coral {
     width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--coral)), hsl(var(--coral-light)));
     margin: 0 auto;
+    border-radius: 2px;
+}
+
+.divider-ocean {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--ocean)), hsl(var(--ocean-light)));
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Wave decorative element */
+.wave-divider {
+    position: relative;
+    overflow: hidden;
 }
 
 /* Fade in animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(24px);
+        transform: translateY(28px);
     }
 
     to {
@@ -163,8 +181,23 @@ body,
     }
 }
 
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(16 90% 54% / 0.4); }
+    50% { box-shadow: 0 0 0 12px hsl(16 90% 54% / 0); }
+}
+
 .animate-fade-in-up {
-    animation: fadeInUp 0.7s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .animate-fade-in {
@@ -175,37 +208,39 @@ body,
     animation: scaleIn 0.5s ease-out forwards;
 }
 
-.delay-100 {
-    animation-delay: 0.1s;
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }
 
-.delay-200 {
-    animation-delay: 0.2s;
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
 }
 
-.delay-300 {
-    animation-delay: 0.3s;
-}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
 
-.delay-400 {
-    animation-delay: 0.4s;
-}
-
-.delay-500 {
-    animation-delay: 0.5s;
-}
-
-.delay-600 {
-    animation-delay: 0.6s;
-}
-
-/* Gold shimmer text */
-.text-shimmer {
-    background: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)));
+/* Coral shimmer text */
+.text-shimmer-coral {
+    background: linear-gradient(90deg, hsl(var(--coral)), hsl(var(--coral-light)), hsl(var(--coral)));
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+.text-shimmer-ocean {
+    background: linear-gradient(90deg, hsl(var(--ocean-light)), hsl(188 70% 55%), hsl(var(--ocean-light)));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
 }
 
 /* Section padding */
@@ -228,10 +263,43 @@ body,
 
 /* Hover lift card */
 .hover-lift {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
 }
 
 .hover-lift:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-deep);
+}
+
+/* Ocean glass card */
+.glass-ocean {
+    background: hsl(188 72% 22% / 0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(188 72% 45% / 0.25);
+}
+
+/* Bubble decorative */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: hsl(var(--ocean-light) / 0.08);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Wave SVG bg pattern */
+.waves-bg {
+    position: relative;
+}
+
+.waves-bg::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='%23f5f9fa' d='M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z'/%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 2;
 }
